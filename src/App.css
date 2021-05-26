@@ -19,7 +19,7 @@ body {
 /* Center section top */
 .center {
   text-align: center;
-  margin: 70px 50px;
+  margin: 50px;
 }
 
 h1 {
@@ -83,8 +83,6 @@ li {
 
 a {
   text-decoration: none;
-}
-button {
   width: 100%;
   padding: 1rem 0;
   display: block;
@@ -92,9 +90,10 @@ button {
   cursor: pointer;
   letter-spacing: 4px;
   background-color: rgb(228, 228, 228);
+  color: black;
 }
 
-button:hover {
+a:hover {
   background-color: #ebf7ff;
 }
 

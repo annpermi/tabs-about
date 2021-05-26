@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import History from './components/History';
 import Vision from './components/Vision';
 import Goals from './components/Goals';
+import Buttons from './components/Buttons';
 import './App.css';
 
 
@@ -10,17 +11,23 @@ class App extends Component {
     constructor(){
         super();
         this.state = {
-            active: false
+            active: true,
+            categories: ['history', 'vision', 'goals']
         }
     }
 
     toggleClass = () => {
-        console.log()
-        // const currentState = this.state.active;
         this.setState({active: false})
     }
     render(){
-        const {active} = this.state;
+        const {active, categories} = this.state;
+        // const buttons = categories.map(btn=>{
+        //     return (
+        //         <Link to='/'>
+        //             <button className={active} onClick={()=>this.toggleClass()}>{btn}</button>
+        //         </Link>
+        //     )
+        // })
         return (
             <Router>
             <div className="container">
@@ -34,17 +41,9 @@ class App extends Component {
                         <img src="https://vannilla-js-basic-project-11-tabs.netlify.app/hero-bcg.jpeg" alt=""/>
                     </div>
                     <div className="section-btn">
-                        <div className="buttons">
-                            <Link to='/'>
-                                <button className={active ? 'active left' : 'left'} onClick={()=>this.toggleClass()}>History</button>
-                            </Link>
-                            <Link to='/vision'>
-                                <button className={active ? 'active' : ''} onClick={()=>this.toggleClass()}>Vision</button>
-                            </Link>
-                            <Link to='/goals'>
-                                <button className={active ? 'active right' : 'right'} onClick={()=>this.toggleClass()}>Goals</button>
-                            </Link>
-                        </div>
+                        {/* <div className="buttons"> */}
+                            <Buttons />
+                        {/* </div> */}
                         <div id="box">
                             <ul id="wrapper">
                             <Switch>
