@@ -68,7 +68,12 @@ li {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.left {
   border-top-left-radius: 10px;
+}
+.right {
   border-top-right-radius: 10px;
 }
 
@@ -76,7 +81,11 @@ li {
   background-color: transparent;
 }
 
+a {
+  text-decoration: none;
+}
 button {
+  width: 100%;
   padding: 1rem 0;
   display: block;
   border: none;
