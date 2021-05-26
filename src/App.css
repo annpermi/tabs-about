@@ -1,38 +1,113 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
+  background-color: #f1f5f8;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  /* padding: 60px 0; */
+  height: 70vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Center section top */
+.center {
+  text-align: center;
+  margin: 70px 50px;
+}
+
+h1 {
+  color: #122a42;
+}
+
+p {
+  color: #627d98;
+}
+/* Middle section  */
+.middle {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+/* left */
+img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  object-fit: cover;
+  height: 25rem;
+  margin-bottom: 30px;
+}
+
+/* right*/
+.section-btn {
+  background-color: white;
+  border-radius: 10px;
+  margin: auto;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  text-align: left;
+  padding: 10px 30px;
+}
+
+/* buttons */
+.buttons {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.active {
+  background-color: transparent;
+}
+
+button {
+  padding: 1rem 0;
+  display: block;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 4px;
+  background-color: rgb(228, 228, 228);
+}
+
+button:hover {
+  background-color: #ebf7ff;
+}
+
+/* Media */
+
+@media (min-width: 1209px) {
+  .about-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .middle {
+    width: 95vw;
   }
-  to {
-    transform: rotate(360deg);
+
+  img {
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .section-btn {
+    margin: 0;
   }
 }
